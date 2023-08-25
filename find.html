@@ -2,19 +2,19 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>카카오톡</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./css/reset.css" />
-		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-
 	<body>
-		<div id="talk">
+		<div id="find">
 			<header>
-				<h1 class="sr-only">카카오톡 메시지</h1>
+				<h1 class="sr-only">카카오톡 찾기</h1>
 
 				<div class="topbar">
 					<div class="skt">
@@ -33,29 +33,51 @@
 			</header>
 
 			<section>
-				<div class="menu">
-					<div class="menu-chat">
-						<h2><a href="#">채팅</a></h2>
-						<h2 class="openchat"><a href="#">오픈채팅</a></h2>
+				<div class="top">
+					<div class="more">
+						<h2>친구들</h2>
 					</div>
-					<div class="menu-setting">
-						<ul>
-							<li>
-								<a href="#"><i class="fas fa-search"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="far fa-comment"></i></a>
-							</li>
-							<li>
-								<a href="./setting.html"><i class="fas fa-cog"></i></a>
-							</li>
-						</ul>
+
+					<div class="setting">
+						<p>
+							<a href="#"><i class="fas fa-search"></i></a>
+						</p>
+						<p>
+							<a href="./setting.html"><i class="fas fa-cog"></i></a>
+						</p>
 					</div>
 				</div>
 
-				<div class="chatlist">
+				<div class="me">
+					<img src="./images/my.jpg" alt="#" />
+
+					<div class="name">
+						<h3>안상현</h3>
+						<p>계획! 실천! 지속!</p>
+					</div>
+				</div>
+
+				<div class="birthday">
+					<h4>생일인 친구</h4>
+
+					<div class="profile">
+						<img src="./images/ico_cake.png" alt="#" />
+						<p>친구의 생일을 확인해 보세요!</p>
+					</div>
+				</div>
+
+				<div class="newfriends">
+					<h4>추가한 친구</h4>
+
+					<div class="profile">
+						<img src="./images/friend_burgerking.jpg" alt="#" />
+						<p>버거킹 - 채널</p>
+					</div>
+				</div>
+
+				<div class="bookmark">
 					<a href="#">
-						<div class="chatlist1">
+						<div class="bookmark1">
 							<div class="profile">
 								<img src="./images/friend_cloud.jpg" alt="#" />
 
@@ -69,7 +91,7 @@
 						</div>
 					</a>
 					<a href="#">
-						<div class="chatlist2">
+						<div class="bookmark2">
 							<div class="profile">
 								<img src="./images/friend_cloud.jpg" alt="#" />
 
@@ -83,7 +105,7 @@
 						</div>
 					</a>
 					<a href="#">
-						<div class="chatlist3">
+						<div class="bookmark3">
 							<div class="profile">
 								<img src="./images/friend_cloud.jpg" alt="#" />
 
@@ -99,20 +121,6 @@
 									<p>1</p>
 								</div>
 							</div>
-						</div>
-					</a>
-					<a href="#">
-						<div class="chatlist4">
-							<div class="profile">
-								<img src="./images/friend_cloud.jpg" alt="#" />
-
-								<div class="name">
-									<h3>구름이</h3>
-									<p>미안해 . . .</p>
-								</div>
-							</div>
-
-							<div class="date"><p>11월 14일</p></div>
 						</div>
 					</a>
 				</div>
@@ -132,7 +140,7 @@
 					</div>
 
 					<div class="find">
-						<a href="find.html"><i class="fas fa-search"></i></a>
+						<a href="#"><i class="fas fa-search"></i></a>
 					</div>
 
 					<div class="more">

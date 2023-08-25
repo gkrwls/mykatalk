@@ -1,0 +1,1033 @@
+@keyframes alertmov {
+	from {
+		bottom: 36px;
+	}
+	to {
+		bottom: 32px;
+	}
+}
+
+@keyframes bottombarmov {
+	from {
+		bottom: -65px;
+	}
+	to {
+		bottom: 0;
+	}
+}
+
+// 톡 페이지
+#talk {
+	> header {
+		> .topbar {
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			font-size: 15px;
+
+			> .skt {
+				display: flex;
+
+				> p {
+					margin-left: 7px;
+				}
+			}
+
+			> .time {
+			}
+
+			> .battery {
+				display: flex;
+
+				> p {
+					margin-right: 5px;
+				}
+			}
+		}
+	} //end of header
+
+	> section {
+		position: relative;
+		left: 0;
+		top: 35px;
+
+		> .menu {
+			display: flex;
+			justify-content: space-between;
+			height: 70px;
+			line-height: 70px;
+
+			> .menu-chat {
+				display: flex;
+				justify-content: space-evenly;
+				width: 200px;
+				font-size: 16px;
+
+				> h2 {
+					&:nth-child(2) {
+						> a {
+							color: #ccc;
+						}
+					}
+				}
+			} //end of .menu-chat
+
+			> .menu-setting {
+				width: 200px;
+				> ul {
+					display: flex;
+					justify-content: space-evenly;
+					font-size: 24px;
+
+					li {
+						&:nth-child(3) {
+							> a {
+								&:hover {
+									color: #f00;
+								}
+							}
+						}
+					} //end of li
+				} //end of ul
+			} //end of .menu-setting
+		} //end of menu
+
+		> .chatlist {
+			margin-top: 20px;
+			> a {
+				display: block;
+				&:hover {
+					background-color: #fefbe3;
+				}
+
+				> .chatlist1,
+				.chatlist2,
+				.chatlist3,
+				.chatlist4 {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					height: 80px;
+					padding: 5px 0;
+
+					> .profile {
+						display: flex;
+						align-items: center;
+
+						> img {
+							width: 64px;
+							height: 64px;
+							border-radius: 25px;
+							margin-left: 20px;
+						}
+
+						> .name {
+							margin-left: 15px;
+
+							> h3 {
+								font-size: 20px;
+								margin-bottom: 10px;
+							}
+
+							> p {
+								color: #999999;
+								font-size: 15px;
+							}
+						}
+					} //end of profile
+
+					> .date {
+						> p {
+							margin-right: 20px;
+						}
+
+						> .alarm {
+							display: flex;
+							justify-content: flex-end;
+							margin: 10px 20px 0 0;
+
+							> p {
+								width: 18px;
+								height: 18px;
+								color: #fff;
+								line-height: 18px;
+								font-size: 10px;
+								text-align: center;
+								background-color: #f00;
+								border-radius: 100%;
+							}
+						} //end of .alarm
+					} //end of .date
+				} //end of .chatlist1,2,3,4
+			} //end of a
+		} //end of .chatlist
+	} //end of section
+
+	> footer {
+		> .bottombar {
+			display: flex;
+			justify-content: space-around;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 65px;
+			line-height: 65px;
+			font-size: 25px;
+			background-color: #fafafa;
+			border-top: 1px solid #ccc;
+
+			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+
+			> .friends {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of friends
+
+			> .talk {
+				position: relative;
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+
+					&:hover > .alarm {
+						animation-play-state: paused;
+					}
+
+					> .alarm {
+						position: absolute;
+						left: 14px;
+						bottom: 34px;
+
+						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+
+						> p {
+							width: 17px;
+							height: 17px;
+							color: #fff;
+							line-height: 17px;
+							font-size: 10px;
+							text-align: center;
+							background-color: #f00;
+							border-radius: 100%;
+						}
+					}
+				}
+			} //end of .talk
+
+			> .find {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .find
+
+			> .more {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .more
+		}
+	} //end of footer
+}
+
+// 세팅 페이지
+#setting {
+	> header {
+		> .topbar {
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			font-size: 15px;
+
+			> .skt {
+				display: flex;
+
+				> p {
+					margin-left: 7px;
+				}
+			}
+
+			> .time {
+			}
+
+			> .battery {
+				display: flex;
+
+				> p {
+					margin-right: 5px;
+				}
+			}
+		}
+	} //end of header
+
+	> section {
+		> .setting {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			left: 0;
+			top: 35px;
+			height: 75px;
+
+			> .back {
+				> a {
+					display: flex;
+					align-items: center;
+
+					&:hover {
+						color: #dcc206;
+					}
+
+					> p {
+						font-size: 18px;
+						font-weight: 600;
+
+						> i {
+							font-size: 23px;
+							transform: rotate(-90deg);
+						}
+
+						&:nth-child(1) {
+							margin: 0 5px 0 20px;
+						}
+					} //end of p
+				} //end of a
+			} //end of .back
+
+			> .search {
+				> a {
+					> p {
+						margin-right: 20px;
+						> i {
+							font-size: 23px;
+						}
+					}
+				} //end of a
+			} //end of .search
+		} //end of .setting
+
+		> .setting-list {
+			position: relative;
+			top: 35px;
+			> ul {
+				line-height: 3;
+
+				> li {
+					font-size: 16px;
+					> a {
+						display: flex;
+						align-items: center;
+
+						&:hover {
+							background-color: #fdf4b1;
+						}
+
+						> p {
+							margin-left: 20px;
+							font-size: 25px;
+						}
+
+						> h2 {
+							font-weight: 400;
+							margin-left: 25px;
+						}
+					}
+				}
+			}
+		}
+	} //end of section
+
+	> footer {
+		> .bottombar {
+			display: flex;
+			justify-content: space-around;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 65px;
+			line-height: 65px;
+			font-size: 25px;
+			background-color: #fafafa;
+			border-top: 1px solid #ccc;
+
+			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+
+			> .friends {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of friends
+
+			> .talk {
+				position: relative;
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+
+					&:hover > .alarm {
+						animation-play-state: paused;
+					}
+
+					> .alarm {
+						position: absolute;
+						left: 14px;
+						bottom: 34px;
+
+						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+
+						> p {
+							width: 17px;
+							height: 17px;
+							color: #fff;
+							line-height: 17px;
+							font-size: 10px;
+							text-align: center;
+							background-color: #f00;
+							border-radius: 100%;
+						}
+					}
+				} //end of a
+			} //end of .talk
+
+			> .find {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .find
+
+			> .more {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .more
+		}
+	} //end of footer
+}
+
+#more {
+	> header {
+		> .topbar {
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			font-size: 15px;
+
+			> .skt {
+				display: flex;
+
+				> p {
+					margin-left: 7px;
+				}
+			}
+
+			> .time {
+			}
+
+			> .battery {
+				display: flex;
+
+				> p {
+					margin-right: 5px;
+				}
+			}
+		}
+	} //end of header
+
+	> section {
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			top: 35px;
+			height: 75px;
+
+			> .more {
+				> h2 {
+					font-size: 25px;
+					font-weight: 500;
+					margin-left: 20px;
+				}
+			}
+
+			> .setting {
+				display: flex;
+
+				> p {
+					font-size: 25px;
+					margin-right: 20px;
+					&:nth-child(2) {
+						> a:hover {
+							color: #f00;
+						}
+					}
+				}
+			} //end of .setting
+		} //end of top
+
+		> .profile {
+			display: flex;
+			align-items: center;
+			position: relative;
+			top: 35px;
+
+			> img {
+				width: 75px;
+				height: 75px;
+				margin: 20px 20px 0 20px;
+				border-radius: 25px;
+			}
+
+			> .name {
+				margin-top: 20px;
+				> h3 {
+					font-size: 20px;
+					font-weight: 400;
+				}
+
+				> p {
+					margin-top: 5px;
+				}
+			}
+		} //end of .profile
+
+		> .add {
+			position: relative;
+			top: 35px;
+			margin-top: 20px;
+
+			> ul {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				width: 92%;
+				margin: 0 auto;
+				border-bottom: 1px solid #e6e6e6;
+
+				> li {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					width: 120px;
+					height: 120px;
+
+					> a {
+						> h4 {
+							font-size: 38px;
+						}
+
+						> p {
+							padding-top: 10px;
+						}
+					} //end of a
+				} //end of li
+			} //end of ul
+		} //end of .add
+
+		> .service {
+			position: relative;
+			top: 35px;
+			margin-left: 20px;
+
+			> h3 {
+				margin: 30px 0 20px 0;
+				font-weight: 400;
+			}
+
+			> .service-box {
+				margin-left: 30px;
+				ul {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					> li {
+						width: 120px;
+						height: 120px;
+						> a {
+							> p {
+								width: 60px;
+								height: 60px;
+								color: #fff;
+								font-size: 38px;
+								line-height: 60px;
+								text-align: center;
+								background-color: #f9de1c;
+								border-radius: 10px;
+							}
+
+							> h4 {
+								margin-top: 20px;
+								font-weight: 400;
+							}
+						}
+					} //end of li
+				} //end of ul
+			} //end of .service-box
+		} //end of .service
+	} //end of section
+
+	> footer {
+		> .bottombar {
+			display: flex;
+			justify-content: space-around;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 65px;
+			line-height: 65px;
+			font-size: 25px;
+			background-color: #fafafa;
+			border-top: 1px solid #ccc;
+
+			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+
+			> .friends {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of friends
+
+			> .talk {
+				position: relative;
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+
+					&:hover > .alarm {
+						animation-play-state: paused;
+					}
+
+					> .alarm {
+						position: absolute;
+						left: 14px;
+						bottom: 34px;
+
+						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+
+						> p {
+							width: 17px;
+							height: 17px;
+							color: #fff;
+							line-height: 17px;
+							font-size: 10px;
+							text-align: center;
+							background-color: #f00;
+							border-radius: 100%;
+						}
+					}
+				}
+			} //end of .talk
+
+			> .find {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .find
+
+			> .more {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .more
+		}
+	} //end of footer
+}
+
+#find {
+	> header {
+		> .topbar {
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			font-size: 15px;
+
+			> .skt {
+				display: flex;
+
+				> p {
+					margin-left: 7px;
+				}
+			}
+
+			> .time {
+			}
+
+			> .battery {
+				display: flex;
+
+				> p {
+					margin-right: 5px;
+				}
+			}
+		}
+	} //end of header
+
+	> section {
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			top: 35px;
+			height: 75px;
+
+			> .more {
+				> h2 {
+					font-size: 25px;
+					font-weight: 500;
+					margin-left: 20px;
+				}
+			}
+
+			> .setting {
+				display: flex;
+
+				> p {
+					font-size: 25px;
+					margin-right: 20px;
+					&:nth-child(2) {
+						> a:hover {
+							color: #f00;
+						}
+					}
+				}
+			} //end of .setting
+		} //end of top
+
+		> .me {
+			display: flex;
+			align-items: center;
+			position: relative;
+			top: 35px;
+			margin: 0 20px 0;
+			border-bottom: 1px solid #e6e6e6;
+
+			> img {
+				width: 80px;
+				height: 80px;
+				margin: 20px 20px 10px 0;
+				border-radius: 25px;
+			}
+
+			> .name {
+				margin-top: 20px;
+				> h3 {
+					font-size: 20px;
+					font-weight: 500;
+				}
+
+				> p {
+					margin-top: 5px;
+				}
+			}
+		} //end of .me
+
+		> .birthday,
+		.newfriends {
+			position: relative;
+			top: 35px;
+			margin: 0 20px 0;
+			border-bottom: 1px solid #e6e6e6;
+
+			> h4 {
+				font-weight: 400;
+				margin: 20px 0 10px 0;
+			}
+
+			> .profile {
+				display: flex;
+				align-items: center;
+
+				> img {
+					width: 60px;
+					height: 60px;
+					margin: 0 20px 10px 0;
+					border-radius: 20px;
+				}
+
+				> p {
+					font-size: 15px;
+					font-weight: 500;
+				}
+			} //end of .profile
+		} //end of .birthday, .newfriends
+
+		> .bookmark {
+			position: relative;
+			top: 35px;
+			margin: 0 20px 0;
+
+			> a {
+				display: block;
+				&:hover {
+					background-color: #fefbe3;
+				}
+
+				> .bookmark1,
+				.bookmark2,
+				.bookmark3 {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					height: 80px;
+					padding: 5px 0;
+
+					> .profile {
+						display: flex;
+						align-items: center;
+
+						> img {
+							width: 64px;
+							height: 64px;
+							border-radius: 25px;
+						}
+
+						> .name {
+							margin-left: 15px;
+
+							> h3 {
+								font-size: 20px;
+								margin-bottom: 10px;
+							}
+
+							> p {
+								color: #999999;
+								font-size: 15px;
+							}
+						}
+					} //end of profile
+				} //end of bookmark1, bookmark2, bookmark3
+			} //end of a
+		} //end of .bookmark
+	} //end of section
+
+	> footer {
+		> .bottombar {
+			display: flex;
+			justify-content: space-around;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 65px;
+			line-height: 65px;
+			font-size: 25px;
+			background-color: #fafafa;
+			border-top: 1px solid #ccc;
+
+			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+
+			> .friends {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of friends
+
+			> .talk {
+				position: relative;
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+
+					&:hover > .alarm {
+						animation-play-state: paused;
+					}
+
+					> .alarm {
+						position: absolute;
+						left: 14px;
+						bottom: 34px;
+
+						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+
+						> p {
+							width: 17px;
+							height: 17px;
+							color: #fff;
+							line-height: 17px;
+							font-size: 10px;
+							text-align: center;
+							background-color: #f00;
+							border-radius: 100%;
+						}
+					}
+				}
+			} //end of .talk
+
+			> .find {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .find
+
+			> .more {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .more
+		}
+	} //end of footer
+}
+
+// ------------------
+#aaaaaaaaaaaa {
+	> header {
+		> .topbar {
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			font-size: 15px;
+
+			> .skt {
+				display: flex;
+
+				> p {
+					margin-left: 7px;
+				}
+			}
+
+			> .time {
+			}
+
+			> .battery {
+				display: flex;
+
+				> p {
+					margin-right: 5px;
+				}
+			}
+		}
+	} //end of header
+
+	> footer {
+		> .bottombar {
+			display: flex;
+			justify-content: space-around;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 65px;
+			line-height: 65px;
+			font-size: 25px;
+			background-color: #fafafa;
+			border-top: 1px solid #ccc;
+
+			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+
+			> .friends {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of friends
+
+			> .talk {
+				position: relative;
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+
+					&:hover > .alarm {
+						animation-play-state: paused;
+					}
+
+					> .alarm {
+						position: absolute;
+						left: 14px;
+						bottom: 34px;
+
+						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+
+						> p {
+							width: 17px;
+							height: 17px;
+							color: #fff;
+							line-height: 17px;
+							font-size: 10px;
+							text-align: center;
+							background-color: #f00;
+							border-radius: 100%;
+						}
+					}
+				}
+			} //end of .talk
+
+			> .find {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .find
+
+			> .more {
+				> a {
+					&:hover {
+						color: #ff6666;
+					}
+				}
+			} //end of .more
+		}
+	} //end of footer
+}

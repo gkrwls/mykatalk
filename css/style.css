@@ -1,1 +1,779 @@
-/*# sourceMappingURL=style.css.map */
+@keyframes alertmov {
+  from {
+    bottom: 36px;
+  }
+  to {
+    bottom: 32px;
+  }
+}
+@keyframes bottombarmov {
+  from {
+    bottom: -65px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+#talk > header > .topbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+#talk > header > .topbar > .skt {
+  display: flex;
+}
+#talk > header > .topbar > .skt > p {
+  margin-left: 7px;
+}
+#talk > header > .topbar > .battery {
+  display: flex;
+}
+#talk > header > .topbar > .battery > p {
+  margin-right: 5px;
+}
+#talk > section {
+  position: relative;
+  left: 0;
+  top: 35px;
+}
+#talk > section > .menu {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  line-height: 70px;
+}
+#talk > section > .menu > .menu-chat {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  font-size: 16px;
+}
+#talk > section > .menu > .menu-chat > h2:nth-child(2) > a {
+  color: #ccc;
+}
+#talk > section > .menu > .menu-setting {
+  width: 200px;
+}
+#talk > section > .menu > .menu-setting > ul {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 24px;
+}
+#talk > section > .menu > .menu-setting > ul li:nth-child(3) > a:hover {
+  color: #f00;
+}
+#talk > section > .chatlist {
+  margin-top: 20px;
+}
+#talk > section > .chatlist > a {
+  display: block;
+}
+#talk > section > .chatlist > a:hover {
+  background-color: #fefbe3;
+}
+#talk > section > .chatlist > a > .chatlist1,
+#talk > section > .chatlist > a .chatlist2,
+#talk > section > .chatlist > a .chatlist3,
+#talk > section > .chatlist > a .chatlist4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 5px 0;
+}
+#talk > section > .chatlist > a > .chatlist1 > .profile,
+#talk > section > .chatlist > a .chatlist2 > .profile,
+#talk > section > .chatlist > a .chatlist3 > .profile,
+#talk > section > .chatlist > a .chatlist4 > .profile {
+  display: flex;
+  align-items: center;
+}
+#talk > section > .chatlist > a > .chatlist1 > .profile > img,
+#talk > section > .chatlist > a .chatlist2 > .profile > img,
+#talk > section > .chatlist > a .chatlist3 > .profile > img,
+#talk > section > .chatlist > a .chatlist4 > .profile > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+#talk > section > .chatlist > a > .chatlist1 > .profile > .name,
+#talk > section > .chatlist > a .chatlist2 > .profile > .name,
+#talk > section > .chatlist > a .chatlist3 > .profile > .name,
+#talk > section > .chatlist > a .chatlist4 > .profile > .name {
+  margin-left: 15px;
+}
+#talk > section > .chatlist > a > .chatlist1 > .profile > .name > h3,
+#talk > section > .chatlist > a .chatlist2 > .profile > .name > h3,
+#talk > section > .chatlist > a .chatlist3 > .profile > .name > h3,
+#talk > section > .chatlist > a .chatlist4 > .profile > .name > h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#talk > section > .chatlist > a > .chatlist1 > .profile > .name > p,
+#talk > section > .chatlist > a .chatlist2 > .profile > .name > p,
+#talk > section > .chatlist > a .chatlist3 > .profile > .name > p,
+#talk > section > .chatlist > a .chatlist4 > .profile > .name > p {
+  color: #999999;
+  font-size: 15px;
+}
+#talk > section > .chatlist > a > .chatlist1 > .date > p,
+#talk > section > .chatlist > a .chatlist2 > .date > p,
+#talk > section > .chatlist > a .chatlist3 > .date > p,
+#talk > section > .chatlist > a .chatlist4 > .date > p {
+  margin-right: 20px;
+}
+#talk > section > .chatlist > a > .chatlist1 > .date > .alarm,
+#talk > section > .chatlist > a .chatlist2 > .date > .alarm,
+#talk > section > .chatlist > a .chatlist3 > .date > .alarm,
+#talk > section > .chatlist > a .chatlist4 > .date > .alarm {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px 0 0;
+}
+#talk > section > .chatlist > a > .chatlist1 > .date > .alarm > p,
+#talk > section > .chatlist > a .chatlist2 > .date > .alarm > p,
+#talk > section > .chatlist > a .chatlist3 > .date > .alarm > p,
+#talk > section > .chatlist > a .chatlist4 > .date > .alarm > p {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  line-height: 18px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#talk > footer > .bottombar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+  animation: bottombarmov 0.8s ease-out alternate 0.5s;
+}
+#talk > footer > .bottombar > .friends > a:hover {
+  color: #ff6666;
+}
+#talk > footer > .bottombar > .talk {
+  position: relative;
+}
+#talk > footer > .bottombar > .talk > a:hover {
+  color: #ff6666;
+}
+#talk > footer > .bottombar > .talk > a:hover > .alarm {
+  animation-play-state: paused;
+}
+#talk > footer > .bottombar > .talk > a > .alarm {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+}
+#talk > footer > .bottombar > .talk > a > .alarm > p {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  line-height: 17px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#talk > footer > .bottombar > .find > a:hover {
+  color: #ff6666;
+}
+#talk > footer > .bottombar > .more > a:hover {
+  color: #ff6666;
+}
+
+#setting > header > .topbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+#setting > header > .topbar > .skt {
+  display: flex;
+}
+#setting > header > .topbar > .skt > p {
+  margin-left: 7px;
+}
+#setting > header > .topbar > .battery {
+  display: flex;
+}
+#setting > header > .topbar > .battery > p {
+  margin-right: 5px;
+}
+#setting > section > .setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 35px;
+  height: 75px;
+}
+#setting > section > .setting > .back > a {
+  display: flex;
+  align-items: center;
+}
+#setting > section > .setting > .back > a:hover {
+  color: #dcc206;
+}
+#setting > section > .setting > .back > a > p {
+  font-size: 18px;
+  font-weight: 600;
+}
+#setting > section > .setting > .back > a > p > i {
+  font-size: 23px;
+  transform: rotate(-90deg);
+}
+#setting > section > .setting > .back > a > p:nth-child(1) {
+  margin: 0 5px 0 20px;
+}
+#setting > section > .setting > .search > a > p {
+  margin-right: 20px;
+}
+#setting > section > .setting > .search > a > p > i {
+  font-size: 23px;
+}
+#setting > section > .setting-list {
+  position: relative;
+  top: 35px;
+}
+#setting > section > .setting-list > ul {
+  line-height: 3;
+}
+#setting > section > .setting-list > ul > li {
+  font-size: 16px;
+}
+#setting > section > .setting-list > ul > li > a {
+  display: flex;
+  align-items: center;
+}
+#setting > section > .setting-list > ul > li > a:hover {
+  background-color: #fdf4b1;
+}
+#setting > section > .setting-list > ul > li > a > p {
+  margin-left: 20px;
+  font-size: 25px;
+}
+#setting > section > .setting-list > ul > li > a > h2 {
+  font-weight: 400;
+  margin-left: 25px;
+}
+#setting > footer > .bottombar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+  animation: bottombarmov 0.8s ease-out alternate 0.5s;
+}
+#setting > footer > .bottombar > .friends > a:hover {
+  color: #ff6666;
+}
+#setting > footer > .bottombar > .talk {
+  position: relative;
+}
+#setting > footer > .bottombar > .talk > a:hover {
+  color: #ff6666;
+}
+#setting > footer > .bottombar > .talk > a:hover > .alarm {
+  animation-play-state: paused;
+}
+#setting > footer > .bottombar > .talk > a > .alarm {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+}
+#setting > footer > .bottombar > .talk > a > .alarm > p {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  line-height: 17px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#setting > footer > .bottombar > .find > a:hover {
+  color: #ff6666;
+}
+#setting > footer > .bottombar > .more > a:hover {
+  color: #ff6666;
+}
+
+#more > header > .topbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+#more > header > .topbar > .skt {
+  display: flex;
+}
+#more > header > .topbar > .skt > p {
+  margin-left: 7px;
+}
+#more > header > .topbar > .battery {
+  display: flex;
+}
+#more > header > .topbar > .battery > p {
+  margin-right: 5px;
+}
+#more > section .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  height: 75px;
+}
+#more > section .top > .more > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+#more > section .top > .setting {
+  display: flex;
+}
+#more > section .top > .setting > p {
+  font-size: 25px;
+  margin-right: 20px;
+}
+#more > section .top > .setting > p:nth-child(2) > a:hover {
+  color: #f00;
+}
+#more > section > .profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 35px;
+}
+#more > section > .profile > img {
+  width: 75px;
+  height: 75px;
+  margin: 20px 20px 0 20px;
+  border-radius: 25px;
+}
+#more > section > .profile > .name {
+  margin-top: 20px;
+}
+#more > section > .profile > .name > h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+#more > section > .profile > .name > p {
+  margin-top: 5px;
+}
+#more > section > .add {
+  position: relative;
+  top: 35px;
+  margin-top: 20px;
+}
+#more > section > .add > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e6e6e6;
+}
+#more > section > .add > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+}
+#more > section > .add > ul > li > a > h4 {
+  font-size: 38px;
+}
+#more > section > .add > ul > li > a > p {
+  padding-top: 10px;
+}
+#more > section > .service {
+  position: relative;
+  top: 35px;
+  margin-left: 20px;
+}
+#more > section > .service > h3 {
+  margin: 30px 0 20px 0;
+  font-weight: 400;
+}
+#more > section > .service > .service-box {
+  margin-left: 30px;
+}
+#more > section > .service > .service-box ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#more > section > .service > .service-box ul > li {
+  width: 120px;
+  height: 120px;
+}
+#more > section > .service > .service-box ul > li > a > p {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  font-size: 38px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #f9de1c;
+  border-radius: 10px;
+}
+#more > section > .service > .service-box ul > li > a > h4 {
+  margin-top: 20px;
+  font-weight: 400;
+}
+#more > footer > .bottombar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+  animation: bottombarmov 0.8s ease-out alternate 0.5s;
+}
+#more > footer > .bottombar > .friends > a:hover {
+  color: #ff6666;
+}
+#more > footer > .bottombar > .talk {
+  position: relative;
+}
+#more > footer > .bottombar > .talk > a:hover {
+  color: #ff6666;
+}
+#more > footer > .bottombar > .talk > a:hover > .alarm {
+  animation-play-state: paused;
+}
+#more > footer > .bottombar > .talk > a > .alarm {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+}
+#more > footer > .bottombar > .talk > a > .alarm > p {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  line-height: 17px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#more > footer > .bottombar > .find > a:hover {
+  color: #ff6666;
+}
+#more > footer > .bottombar > .more > a:hover {
+  color: #ff6666;
+}
+
+#find > header > .topbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+#find > header > .topbar > .skt {
+  display: flex;
+}
+#find > header > .topbar > .skt > p {
+  margin-left: 7px;
+}
+#find > header > .topbar > .battery {
+  display: flex;
+}
+#find > header > .topbar > .battery > p {
+  margin-right: 5px;
+}
+#find > section .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  height: 75px;
+}
+#find > section .top > .more > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+#find > section .top > .setting {
+  display: flex;
+}
+#find > section .top > .setting > p {
+  font-size: 25px;
+  margin-right: 20px;
+}
+#find > section .top > .setting > p:nth-child(2) > a:hover {
+  color: #f00;
+}
+#find > section > .me {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  margin: 0 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+#find > section > .me > img {
+  width: 80px;
+  height: 80px;
+  margin: 20px 20px 10px 0;
+  border-radius: 25px;
+}
+#find > section > .me > .name {
+  margin-top: 20px;
+}
+#find > section > .me > .name > h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#find > section > .me > .name > p {
+  margin-top: 5px;
+}
+#find > section > .birthday,
+#find > section .newfriends {
+  position: relative;
+  top: 35px;
+  margin: 0 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+#find > section > .birthday > h4,
+#find > section .newfriends > h4 {
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+}
+#find > section > .birthday > .profile,
+#find > section .newfriends > .profile {
+  display: flex;
+  align-items: center;
+}
+#find > section > .birthday > .profile > img,
+#find > section .newfriends > .profile > img {
+  width: 60px;
+  height: 60px;
+  margin: 0 20px 10px 0;
+  border-radius: 20px;
+}
+#find > section > .birthday > .profile > p,
+#find > section .newfriends > .profile > p {
+  font-size: 15px;
+  font-weight: 500;
+}
+#find > section > .bookmark {
+  position: relative;
+  top: 35px;
+  margin: 0 20px 0;
+}
+#find > section > .bookmark > a {
+  display: block;
+}
+#find > section > .bookmark > a:hover {
+  background-color: #fefbe3;
+}
+#find > section > .bookmark > a > .bookmark1,
+#find > section > .bookmark > a .bookmark2,
+#find > section > .bookmark > a .bookmark3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 5px 0;
+}
+#find > section > .bookmark > a > .bookmark1 > .profile,
+#find > section > .bookmark > a .bookmark2 > .profile,
+#find > section > .bookmark > a .bookmark3 > .profile {
+  display: flex;
+  align-items: center;
+}
+#find > section > .bookmark > a > .bookmark1 > .profile > img,
+#find > section > .bookmark > a .bookmark2 > .profile > img,
+#find > section > .bookmark > a .bookmark3 > .profile > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 25px;
+}
+#find > section > .bookmark > a > .bookmark1 > .profile > .name,
+#find > section > .bookmark > a .bookmark2 > .profile > .name,
+#find > section > .bookmark > a .bookmark3 > .profile > .name {
+  margin-left: 15px;
+}
+#find > section > .bookmark > a > .bookmark1 > .profile > .name > h3,
+#find > section > .bookmark > a .bookmark2 > .profile > .name > h3,
+#find > section > .bookmark > a .bookmark3 > .profile > .name > h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#find > section > .bookmark > a > .bookmark1 > .profile > .name > p,
+#find > section > .bookmark > a .bookmark2 > .profile > .name > p,
+#find > section > .bookmark > a .bookmark3 > .profile > .name > p {
+  color: #999999;
+  font-size: 15px;
+}
+#find > footer > .bottombar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+  animation: bottombarmov 0.8s ease-out alternate 0.5s;
+}
+#find > footer > .bottombar > .friends > a:hover {
+  color: #ff6666;
+}
+#find > footer > .bottombar > .talk {
+  position: relative;
+}
+#find > footer > .bottombar > .talk > a:hover {
+  color: #ff6666;
+}
+#find > footer > .bottombar > .talk > a:hover > .alarm {
+  animation-play-state: paused;
+}
+#find > footer > .bottombar > .talk > a > .alarm {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+}
+#find > footer > .bottombar > .talk > a > .alarm > p {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  line-height: 17px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#find > footer > .bottombar > .find > a:hover {
+  color: #ff6666;
+}
+#find > footer > .bottombar > .more > a:hover {
+  color: #ff6666;
+}
+
+#aaaaaaaaaaaa > header > .topbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+}
+#aaaaaaaaaaaa > header > .topbar > .skt {
+  display: flex;
+}
+#aaaaaaaaaaaa > header > .topbar > .skt > p {
+  margin-left: 7px;
+}
+#aaaaaaaaaaaa > header > .topbar > .battery {
+  display: flex;
+}
+#aaaaaaaaaaaa > header > .topbar > .battery > p {
+  margin-right: 5px;
+}
+#aaaaaaaaaaaa > footer > .bottombar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #ccc;
+  animation: bottombarmov 0.8s ease-out alternate 0.5s;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .friends > a:hover {
+  color: #ff6666;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .talk {
+  position: relative;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .talk > a:hover {
+  color: #ff6666;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .talk > a:hover > .alarm {
+  animation-play-state: paused;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .talk > a > .alarm {
+  position: absolute;
+  left: 14px;
+  bottom: 34px;
+  animation: alertmov 0.5s ease-in-out 0s infinite alternate;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .talk > a > .alarm > p {
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  line-height: 17px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 100%;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .find > a:hover {
+  color: #ff6666;
+}
+#aaaaaaaaaaaa > footer > .bottombar > .more > a:hover {
+  color: #ff6666;
+}/*# sourceMappingURL=style.css.map */
