@@ -16,8 +16,10 @@
 	}
 }
 
+$point-color-1: #f00;
+
 // 톡 페이지
-#talk {
+#wrap {
 	> header {
 		> .topbar {
 			display: flex;
@@ -38,9 +40,6 @@
 				}
 			}
 
-			> .time {
-			}
-
 			> .battery {
 				display: flex;
 
@@ -55,6 +54,35 @@
 		position: relative;
 		left: 0;
 		top: 35px;
+
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 75px;
+
+			> .more {
+				> h2 {
+					font-size: 25px;
+					font-weight: 500;
+					margin-left: 20px;
+				}
+			}
+
+			> .setting {
+				display: flex;
+
+				> p {
+					font-size: 25px;
+					margin-right: 20px;
+					&:nth-child(2) {
+						> a:hover {
+							color: $point-color-1;
+						}
+					}
+				}
+			} //end of .setting
+		} //end of top
 
 		> .menu {
 			display: flex;
@@ -88,7 +116,7 @@
 						&:nth-child(3) {
 							> a {
 								&:hover {
-									color: #f00;
+									color: $point-color-1;
 								}
 							}
 						}
@@ -158,7 +186,7 @@
 								line-height: 18px;
 								font-size: 10px;
 								text-align: center;
-								background-color: #f00;
+								background-color: $point-color-1;
 								border-radius: 100%;
 							}
 						} //end of .alarm
@@ -168,335 +196,7 @@
 		} //end of .chatlist
 	} //end of section
 
-	> footer {
-		> .bottombar {
-			display: flex;
-			justify-content: space-around;
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 65px;
-			line-height: 65px;
-			font-size: 25px;
-			background-color: #fafafa;
-			border-top: 1px solid #ccc;
-
-			animation: bottombarmov 0.8s ease-out alternate 0.5s;
-
-			> .friends {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of friends
-
-			> .talk {
-				position: relative;
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-
-					&:hover > .alarm {
-						animation-play-state: paused;
-					}
-
-					> .alarm {
-						position: absolute;
-						left: 14px;
-						bottom: 34px;
-
-						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
-
-						> p {
-							width: 17px;
-							height: 17px;
-							color: #fff;
-							line-height: 17px;
-							font-size: 10px;
-							text-align: center;
-							background-color: #f00;
-							border-radius: 100%;
-						}
-					}
-				}
-			} //end of .talk
-
-			> .find {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .find
-
-			> .more {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .more
-		}
-	} //end of footer
-}
-
-// 세팅 페이지
-#setting {
-	> header {
-		> .topbar {
-			display: flex;
-			justify-content: space-between;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 35px;
-			line-height: 35px;
-			font-size: 15px;
-
-			> .skt {
-				display: flex;
-
-				> p {
-					margin-left: 7px;
-				}
-			}
-
-			> .time {
-			}
-
-			> .battery {
-				display: flex;
-
-				> p {
-					margin-right: 5px;
-				}
-			}
-		}
-	} //end of header
-
-	> section {
-		> .setting {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			position: relative;
-			left: 0;
-			top: 35px;
-			height: 75px;
-
-			> .back {
-				> a {
-					display: flex;
-					align-items: center;
-
-					&:hover {
-						color: #dcc206;
-					}
-
-					> p {
-						font-size: 18px;
-						font-weight: 600;
-
-						> i {
-							font-size: 23px;
-							transform: rotate(-90deg);
-						}
-
-						&:nth-child(1) {
-							margin: 0 5px 0 20px;
-						}
-					} //end of p
-				} //end of a
-			} //end of .back
-
-			> .search {
-				> a {
-					> p {
-						margin-right: 20px;
-						> i {
-							font-size: 23px;
-						}
-					}
-				} //end of a
-			} //end of .search
-		} //end of .setting
-
-		> .setting-list {
-			position: relative;
-			top: 35px;
-			> ul {
-				line-height: 3;
-
-				> li {
-					font-size: 16px;
-					> a {
-						display: flex;
-						align-items: center;
-
-						&:hover {
-							background-color: #fdf4b1;
-						}
-
-						> p {
-							margin-left: 20px;
-							font-size: 25px;
-						}
-
-						> h2 {
-							font-weight: 400;
-							margin-left: 25px;
-						}
-					}
-				}
-			}
-		}
-	} //end of section
-
-	> footer {
-		> .bottombar {
-			display: flex;
-			justify-content: space-around;
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 65px;
-			line-height: 65px;
-			font-size: 25px;
-			background-color: #fafafa;
-			border-top: 1px solid #ccc;
-
-			animation: bottombarmov 0.8s ease-out alternate 0.5s;
-
-			> .friends {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of friends
-
-			> .talk {
-				position: relative;
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-
-					&:hover > .alarm {
-						animation-play-state: paused;
-					}
-
-					> .alarm {
-						position: absolute;
-						left: 14px;
-						bottom: 34px;
-
-						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
-
-						> p {
-							width: 17px;
-							height: 17px;
-							color: #fff;
-							line-height: 17px;
-							font-size: 10px;
-							text-align: center;
-							background-color: #f00;
-							border-radius: 100%;
-						}
-					}
-				} //end of a
-			} //end of .talk
-
-			> .find {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .find
-
-			> .more {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .more
-		}
-	} //end of footer
-}
-
-#more {
-	> header {
-		> .topbar {
-			display: flex;
-			justify-content: space-between;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 35px;
-			line-height: 35px;
-			font-size: 15px;
-
-			> .skt {
-				display: flex;
-
-				> p {
-					margin-left: 7px;
-				}
-			}
-
-			> .time {
-			}
-
-			> .battery {
-				display: flex;
-
-				> p {
-					margin-right: 5px;
-				}
-			}
-		}
-	} //end of header
-
-	> section {
-		.top {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			position: relative;
-			top: 35px;
-			height: 75px;
-
-			> .more {
-				> h2 {
-					font-size: 25px;
-					font-weight: 500;
-					margin-left: 20px;
-				}
-			}
-
-			> .setting {
-				display: flex;
-
-				> p {
-					font-size: 25px;
-					margin-right: 20px;
-					&:nth-child(2) {
-						> a:hover {
-							color: #f00;
-						}
-					}
-				}
-			} //end of .setting
-		} //end of top
-
+	> section#more {
 		> .profile {
 			display: flex;
 			align-items: center;
@@ -597,149 +297,82 @@
 				} //end of ul
 			} //end of .service-box
 		} //end of .service
-	} //end of section
-
-	> footer {
-		> .bottombar {
-			display: flex;
-			justify-content: space-around;
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 65px;
-			line-height: 65px;
-			font-size: 25px;
-			background-color: #fafafa;
-			border-top: 1px solid #ccc;
-
-			animation: bottombarmov 0.8s ease-out alternate 0.5s;
-
-			> .friends {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of friends
-
-			> .talk {
-				position: relative;
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-
-					&:hover > .alarm {
-						animation-play-state: paused;
-					}
-
-					> .alarm {
-						position: absolute;
-						left: 14px;
-						bottom: 34px;
-
-						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
-
-						> p {
-							width: 17px;
-							height: 17px;
-							color: #fff;
-							line-height: 17px;
-							font-size: 10px;
-							text-align: center;
-							background-color: #f00;
-							border-radius: 100%;
-						}
-					}
-				}
-			} //end of .talk
-
-			> .find {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .find
-
-			> .more {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .more
-		}
-	} //end of footer
-}
-
-#find {
-	> header {
-		> .topbar {
-			display: flex;
-			justify-content: space-between;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 35px;
-			line-height: 35px;
-			font-size: 15px;
-
-			> .skt {
-				display: flex;
-
-				> p {
-					margin-left: 7px;
-				}
-			}
-
-			> .time {
-			}
-
-			> .battery {
-				display: flex;
-
-				> p {
-					margin-right: 5px;
-				}
-			}
-		}
-	} //end of header
-
-	> section {
-		.top {
+	} //end of section#more
+	> section#setting {
+		> .setting {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			position: relative;
-			top: 35px;
 			height: 75px;
 
-			> .more {
-				> h2 {
-					font-size: 25px;
-					font-weight: 500;
-					margin-left: 20px;
-				}
-			}
+			> .back {
+				> a {
+					display: flex;
+					align-items: center;
 
-			> .setting {
-				display: flex;
+					&:hover {
+						color: #dcc206;
+					}
 
-				> p {
-					font-size: 25px;
-					margin-right: 20px;
-					&:nth-child(2) {
-						> a:hover {
-							color: #f00;
+					> p {
+						font-size: 18px;
+						font-weight: 600;
+
+						> i {
+							font-size: 23px;
+							transform: rotate(-90deg);
+						}
+
+						&:nth-child(1) {
+							margin: 0 5px 0 20px;
+						}
+					} //end of p
+				} //end of a
+			} //end of .back
+
+			> .search {
+				> a {
+					> p {
+						margin-right: 20px;
+						> i {
+							font-size: 23px;
+						}
+					}
+				} //end of a
+			} //end of .search
+		} //end of .setting
+
+		> .setting-list {
+			position: relative;
+			top: 35px;
+			> ul {
+				line-height: 3;
+
+				> li {
+					font-size: 16px;
+					> a {
+						display: flex;
+						align-items: center;
+
+						&:hover {
+							background-color: #fdf4b1;
+						}
+
+						> p {
+							margin-left: 20px;
+							font-size: 25px;
+						}
+
+						> h2 {
+							font-weight: 400;
+							margin-left: 25px;
 						}
 					}
 				}
-			} //end of .setting
-		} //end of top
-
+			}
+		}
+	} //end of section#setting
+	> section#friends {
 		> .me {
 			display: flex;
 			align-items: center;
@@ -845,7 +478,90 @@
 				} //end of bookmark1, bookmark2, bookmark3
 			} //end of a
 		} //end of .bookmark
-	} //end of section
+	} //end of section#friends
+	> section#find {
+		> .add {
+			margin: 0 20px;
+			border-bottom: 1px solid #e6e6e6;
+
+			> ul {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				text-align: center;
+				margin: 20px 0;
+				> li {
+					> a {
+						> h3 {
+							font-size: 38px;
+							font-weight: 400;
+						}
+
+						> p {
+							font-size: 12px;
+						}
+					} //end of a
+				} //end of li
+			} //end of ul
+		} //end of .add
+
+		> .suggest {
+			> h3 {
+				font-weight: 400;
+				line-height: 100px;
+				margin-left: 20px;
+			}
+
+			> .suggest-list {
+				> ul {
+					> li {
+						line-height: 100px;
+
+						&:hover {
+							background-color: #fdf4b1;
+						}
+
+						> a {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+
+							> .profile {
+								margin-left: 20px;
+								display: flex;
+								align-items: center;
+
+								> p {
+									width: 40px;
+									height: 40px;
+									text-align: center;
+									line-height: 45px;
+									font-size: 35px;
+									color: #000;
+									border: 3px solid #000;
+									border-radius: 100%;
+									overflow: hidden;
+								}
+
+								> h4 {
+									margin-left: 20px;
+									font-size: 18px;
+									font-weight: 500;
+								}
+							}
+
+							> .add {
+								margin-right: 20px;
+								> i {
+									font-size: 20px;
+								}
+							}
+						} // end of a
+					} //end of li
+				} //end of ul
+			} //end of .suggestlist
+		} //end of .suggest
+	} //end of section#find
 
 	> footer {
 		> .bottombar {
@@ -861,7 +577,7 @@
 			background-color: #fafafa;
 			border-top: 1px solid #ccc;
 
-			animation: bottombarmov 0.8s ease-out alternate 0.5s;
+			animation: bottombarmov 0.8s ease-out forwards 0.5s;
 
 			> .friends {
 				> a {
@@ -896,7 +612,7 @@
 							line-height: 17px;
 							font-size: 10px;
 							text-align: center;
-							background-color: #f00;
+							background-color: $point-color-1;
 							border-radius: 100%;
 						}
 					}
@@ -918,116 +634,53 @@
 					}
 				}
 			} //end of .more
-		}
+		} //end of .bottombar
 	} //end of footer
-}
+	> footer#talk-footer {
+		width: 100%;
+		position: fixed;
+		right: 0;
+		bottom: 0;
 
-// ------------------
-#aaaaaaaaaaaa {
-	> header {
-		> .topbar {
+		> .sendmessage {
 			display: flex;
 			justify-content: space-between;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 35px;
-			line-height: 35px;
-			font-size: 15px;
+			align-items: center;
+			height: 50px;
+			border: 1px solid #ccc;
 
-			> .skt {
+			> .plus {
 				display: flex;
+				width: 50px;
+				margin-left: 5px;
 
 				> p {
-					margin-left: 7px;
+					margin-left: 10px;
+					font-size: 20px;
 				}
 			}
 
-			> .time {
+			> input {
+				border-width: 0;
+				width: 100%;
+				height: 50%;
 			}
 
-			> .battery {
+			> .emoticon {
 				display: flex;
+				width: 60px;
 
 				> p {
-					margin-right: 5px;
+					margin-right: 10px;
+					font-size: 18px;
 				}
 			}
-		}
-	} //end of header
+		} //end of .sendmessage
 
-	> footer {
-		> .bottombar {
-			display: flex;
-			justify-content: space-around;
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 65px;
-			line-height: 65px;
-			font-size: 25px;
-			background-color: #fafafa;
-			border-top: 1px solid #ccc;
-
-			animation: bottombarmov 0.8s ease-out alternate 0.5s;
-
-			> .friends {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of friends
-
-			> .talk {
-				position: relative;
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-
-					&:hover > .alarm {
-						animation-play-state: paused;
-					}
-
-					> .alarm {
-						position: absolute;
-						left: 14px;
-						bottom: 34px;
-
-						animation: alertmov 0.5s ease-in-out 0s infinite alternate;
-
-						> p {
-							width: 17px;
-							height: 17px;
-							color: #fff;
-							line-height: 17px;
-							font-size: 10px;
-							text-align: center;
-							background-color: #f00;
-							border-radius: 100%;
-						}
-					}
-				}
-			} //end of .talk
-
-			> .find {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .find
-
-			> .more {
-				> a {
-					&:hover {
-						color: #ff6666;
-					}
-				}
-			} //end of .more
-		}
-	} //end of footer
-}
+		> .keyboard {
+			> img {
+				width: 100%;
+			}
+		} //end of .keyboard
+	} //end of footer#talk-footer
+} //end of #talk
