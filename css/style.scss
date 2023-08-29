@@ -13,18 +13,38 @@
 	}
 	to {
 		bottom: 0;
+		visibility: inherit;
 	}
 }
 
+$notmobile: 'screen and (min-width:550px)';
+
 $point-color-1: #f00;
 
-// 톡 페이지
+@media #{$notmobile} {
+	#wrap {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1000;
+		background-color: #ffd700;
+
+		> header,
+		section,
+		footer {
+			display: none;
+		}
+	}
+}
+
 #wrap {
 	> header {
 		> .topbar {
 			display: flex;
 			justify-content: space-between;
-			position: absolute;
+			position: fixed;
 			left: 0;
 			top: 0;
 			width: 100%;
@@ -54,6 +74,8 @@ $point-color-1: #f00;
 		position: relative;
 		left: 0;
 		top: 35px;
+		width: 100%;
+		height: 800px;
 
 		.top {
 			display: flex;
@@ -197,6 +219,7 @@ $point-color-1: #f00;
 	} //end of section
 
 	> section#more {
+		height: 100%;
 		> .profile {
 			display: flex;
 			align-items: center;
@@ -298,6 +321,7 @@ $point-color-1: #f00;
 			} //end of .service-box
 		} //end of .service
 	} //end of section#more
+
 	> section#setting {
 		> .setting {
 			display: flex;
@@ -372,6 +396,7 @@ $point-color-1: #f00;
 			}
 		}
 	} //end of section#setting
+
 	> section#friends {
 		> .me {
 			display: flex;
@@ -475,10 +500,29 @@ $point-color-1: #f00;
 							}
 						}
 					} //end of profile
+
+					> .date {
+						> .alarm {
+							position: absolute;
+							right: 0;
+							top: 150px;
+							> p {
+								width: 18px;
+								height: 18px;
+								text-align: center;
+								line-height: 18px;
+								color: #fff;
+								font-size: 11px;
+								background-color: #f00;
+								border-radius: 100%;
+							}
+						}
+					}
 				} //end of bookmark1, bookmark2, bookmark3
 			} //end of a
 		} //end of .bookmark
 	} //end of section#friends
+
 	> section#find {
 		> .add {
 			margin: 0 20px;
@@ -563,6 +607,110 @@ $point-color-1: #f00;
 		} //end of .suggest
 	} //end of section#find
 
+	> section#talk {
+		height: 800px;
+		background-image: url(./../images/chatBg.png);
+		overflow-x: hidden;
+
+		> .setting {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 75px;
+
+			> .back {
+				> a {
+					display: flex;
+					align-items: center;
+
+					&:hover {
+						color: #dcc206;
+					}
+
+					> p {
+						font-size: 18px;
+						font-weight: 600;
+
+						> i {
+							font-size: 23px;
+							transform: rotate(-90deg);
+						}
+
+						&:nth-child(1) {
+							margin: 0 5px 0 20px;
+						}
+					} //end of p
+				} //end of a
+			} //end of .back
+
+			> .search {
+				display: flex;
+				> a {
+					> p {
+						margin-right: 20px;
+						> i {
+							font-size: 23px;
+						}
+					}
+				} //end of a
+			} //end of .search
+		} //end of .setting
+
+		> .date {
+			text-align: center;
+		} //end of .date
+
+		> .chat {
+			display: flex;
+
+			> img {
+				width: 40px;
+				height: 40px;
+				margin-left: 20px;
+				border-radius: 100%;
+			}
+
+			> .chat-cont {
+				> .you {
+					width: 100vw;
+					text-align: left;
+
+					> h2 {
+						margin-left: 20px;
+						font-size: 15px;
+						font-weight: 400;
+					}
+
+					> p {
+						width: 150px;
+						height: 40px;
+						margin: 5px 0 0 20px;
+						line-height: 40px;
+						text-align: center;
+						background-color: #fff;
+						border-radius: 15px;
+					}
+				}
+
+				> .me {
+					display: flex;
+					justify-content: flex-end;
+					width: 100vw;
+
+					> p {
+						width: 150px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						background-color: #fae54e;
+						border-radius: 15px;
+						margin-right: 90px;
+					}
+				}
+			}
+		} //end of .chat
+	} //end of section#talk
+
 	> footer {
 		> .bottombar {
 			display: flex;
@@ -576,8 +724,9 @@ $point-color-1: #f00;
 			font-size: 25px;
 			background-color: #fafafa;
 			border-top: 1px solid #ccc;
+			visibility: hidden;
 
-			animation: bottombarmov 0.8s ease-out forwards 0.5s;
+			animation: bottombarmov 0.6s ease-out forwards 0.5s;
 
 			> .friends {
 				> a {
@@ -636,11 +785,18 @@ $point-color-1: #f00;
 			} //end of .more
 		} //end of .bottombar
 	} //end of footer
+
 	> footer#talk-footer {
 		width: 100%;
 		position: fixed;
 		right: 0;
-		bottom: 0;
+		bottom: -330px;
+		transition: all 0.4s;
+		background-color: #fff;
+
+		&:hover {
+			bottom: 0;
+		}
 
 		> .sendmessage {
 			display: flex;
@@ -661,9 +817,10 @@ $point-color-1: #f00;
 			}
 
 			> input {
-				border-width: 0;
 				width: 100%;
 				height: 50%;
+				margin-right: 20px;
+				border-width: 0;
 			}
 
 			> .emoticon {
