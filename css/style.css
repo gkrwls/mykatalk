@@ -1,3 +1,4 @@
+@import url(./reset.css);
 @keyframes alertmov {
   from {
     bottom: 36px;
@@ -191,7 +192,7 @@
   border-radius: 100%;
 }
 #wrap > section#more {
-  height: 100%;
+  height: 800px;
 }
 #wrap > section#more > .profile {
   display: flex;
