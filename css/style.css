@@ -26,10 +26,24 @@
     z-index: 1000;
     background-color: #ffd700;
   }
+  #wrap > .notmobile {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+  }
   #wrap > header,
   #wrap section,
   #wrap footer {
     display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  #wrap > .notmobile {
+    font-size: 0;
   }
 }
 #wrap > header > .topbar {
@@ -42,15 +56,23 @@
   height: 35px;
   line-height: 35px;
   font-size: 15px;
+  background-color: #fff;
+  z-index: 10000;
 }
 #wrap > header > .topbar > .skt {
   display: flex;
+  width: 17%;
 }
 #wrap > header > .topbar > .skt > p {
   margin-left: 7px;
 }
+#wrap > header > .topbar > .time {
+  width: 70%;
+  text-align: center;
+}
 #wrap > header > .topbar > .battery {
   display: flex;
+  width: 13%;
 }
 #wrap > header > .topbar > .battery > p {
   margin-right: 5px;
@@ -121,7 +143,8 @@
 #wrap > section > .chatlist > a > .chatlist1,
 #wrap > section > .chatlist > a .chatlist2,
 #wrap > section > .chatlist > a .chatlist3,
-#wrap > section > .chatlist > a .chatlist4 {
+#wrap > section > .chatlist > a .chatlist4,
+#wrap > section > .chatlist > a .chatlist5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,49 +154,66 @@
 #wrap > section > .chatlist > a > .chatlist1 > .profile,
 #wrap > section > .chatlist > a .chatlist2 > .profile,
 #wrap > section > .chatlist > a .chatlist3 > .profile,
-#wrap > section > .chatlist > a .chatlist4 > .profile {
+#wrap > section > .chatlist > a .chatlist4 > .profile,
+#wrap > section > .chatlist > a .chatlist5 > .profile {
   display: flex;
   align-items: center;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .profile > img,
 #wrap > section > .chatlist > a .chatlist2 > .profile > img,
 #wrap > section > .chatlist > a .chatlist3 > .profile > img,
-#wrap > section > .chatlist > a .chatlist4 > .profile > img {
+#wrap > section > .chatlist > a .chatlist4 > .profile > img,
+#wrap > section > .chatlist > a .chatlist5 > .profile > img {
   width: 64px;
   height: 64px;
-  border-radius: 25px;
   margin-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .profile > .name,
 #wrap > section > .chatlist > a .chatlist2 > .profile > .name,
 #wrap > section > .chatlist > a .chatlist3 > .profile > .name,
-#wrap > section > .chatlist > a .chatlist4 > .profile > .name {
+#wrap > section > .chatlist > a .chatlist4 > .profile > .name,
+#wrap > section > .chatlist > a .chatlist5 > .profile > .name {
   margin-left: 15px;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .profile > .name > h3,
 #wrap > section > .chatlist > a .chatlist2 > .profile > .name > h3,
 #wrap > section > .chatlist > a .chatlist3 > .profile > .name > h3,
-#wrap > section > .chatlist > a .chatlist4 > .profile > .name > h3 {
+#wrap > section > .chatlist > a .chatlist4 > .profile > .name > h3,
+#wrap > section > .chatlist > a .chatlist5 > .profile > .name > h3 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+#wrap > section > .chatlist > a > .chatlist1 > .profile > .name > h3 > i,
+#wrap > section > .chatlist > a .chatlist2 > .profile > .name > h3 > i,
+#wrap > section > .chatlist > a .chatlist3 > .profile > .name > h3 > i,
+#wrap > section > .chatlist > a .chatlist4 > .profile > .name > h3 > i,
+#wrap > section > .chatlist > a .chatlist5 > .profile > .name > h3 > i {
+  margin-left: 20px;
+  color: #cccccc;
+  font-size: 16px;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .profile > .name > p,
 #wrap > section > .chatlist > a .chatlist2 > .profile > .name > p,
 #wrap > section > .chatlist > a .chatlist3 > .profile > .name > p,
-#wrap > section > .chatlist > a .chatlist4 > .profile > .name > p {
+#wrap > section > .chatlist > a .chatlist4 > .profile > .name > p,
+#wrap > section > .chatlist > a .chatlist5 > .profile > .name > p {
   color: #999999;
   font-size: 15px;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .date > p,
 #wrap > section > .chatlist > a .chatlist2 > .date > p,
 #wrap > section > .chatlist > a .chatlist3 > .date > p,
-#wrap > section > .chatlist > a .chatlist4 > .date > p {
+#wrap > section > .chatlist > a .chatlist4 > .date > p,
+#wrap > section > .chatlist > a .chatlist5 > .date > p {
   margin-right: 20px;
 }
 #wrap > section > .chatlist > a > .chatlist1 > .date > .alarm,
 #wrap > section > .chatlist > a .chatlist2 > .date > .alarm,
 #wrap > section > .chatlist > a .chatlist3 > .date > .alarm,
-#wrap > section > .chatlist > a .chatlist4 > .date > .alarm {
+#wrap > section > .chatlist > a .chatlist4 > .date > .alarm,
+#wrap > section > .chatlist > a .chatlist5 > .date > .alarm {
   display: flex;
   justify-content: flex-end;
   margin: 10px 20px 0 0;
@@ -181,7 +221,8 @@
 #wrap > section > .chatlist > a > .chatlist1 > .date > .alarm > p,
 #wrap > section > .chatlist > a .chatlist2 > .date > .alarm > p,
 #wrap > section > .chatlist > a .chatlist3 > .date > .alarm > p,
-#wrap > section > .chatlist > a .chatlist4 > .date > .alarm > p {
+#wrap > section > .chatlist > a .chatlist4 > .date > .alarm > p,
+#wrap > section > .chatlist > a .chatlist5 > .date > .alarm > p {
   width: 18px;
   height: 18px;
   color: #fff;
@@ -189,7 +230,7 @@
   font-size: 10px;
   text-align: center;
   background-color: #f00;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 #wrap > section#more {
   height: 800px;
@@ -198,7 +239,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  top: 35px;
 }
 #wrap > section#more > .profile > img {
   width: 75px;
@@ -310,7 +350,6 @@
 }
 #wrap > section#setting > .setting-list {
   position: relative;
-  top: 35px;
 }
 #wrap > section#setting > .setting-list > ul {
   line-height: 3;
@@ -333,22 +372,21 @@
   font-weight: 400;
   margin-left: 25px;
 }
+#wrap > section#friends {
+  height: 865px;
+}
 #wrap > section#friends > .me {
   display: flex;
   align-items: center;
   position: relative;
-  top: 35px;
   margin: 0 20px 0;
   border-bottom: 1px solid #e6e6e6;
 }
 #wrap > section#friends > .me > img {
   width: 80px;
   height: 80px;
-  margin: 20px 20px 10px 0;
+  margin: 10px 20px 10px 0;
   border-radius: 25px;
-}
-#wrap > section#friends > .me > .name {
-  margin-top: 20px;
 }
 #wrap > section#friends > .me > .name > h3 {
   font-size: 20px;
@@ -360,14 +398,13 @@
 #wrap > section#friends > .birthday,
 #wrap > section#friends .newfriends {
   position: relative;
-  top: 35px;
   margin: 0 20px 0;
   border-bottom: 1px solid #e6e6e6;
 }
 #wrap > section#friends > .birthday > h4,
 #wrap > section#friends .newfriends > h4 {
   font-weight: 400;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 #wrap > section#friends > .birthday > .profile,
 #wrap > section#friends .newfriends > .profile {
@@ -399,7 +436,8 @@
 }
 #wrap > section#friends > .bookmark > a > .bookmark1,
 #wrap > section#friends > .bookmark > a .bookmark2,
-#wrap > section#friends > .bookmark > a .bookmark3 {
+#wrap > section#friends > .bookmark > a .bookmark3,
+#wrap > section#friends > .bookmark > a .bookmark4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -408,44 +446,52 @@
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .profile,
 #wrap > section#friends > .bookmark > a .bookmark2 > .profile,
-#wrap > section#friends > .bookmark > a .bookmark3 > .profile {
+#wrap > section#friends > .bookmark > a .bookmark3 > .profile,
+#wrap > section#friends > .bookmark > a .bookmark4 > .profile {
   display: flex;
   align-items: center;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .profile > img,
 #wrap > section#friends > .bookmark > a .bookmark2 > .profile > img,
-#wrap > section#friends > .bookmark > a .bookmark3 > .profile > img {
+#wrap > section#friends > .bookmark > a .bookmark3 > .profile > img,
+#wrap > section#friends > .bookmark > a .bookmark4 > .profile > img {
   width: 64px;
   height: 64px;
+  border: 1px solid #ccc;
   border-radius: 25px;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .profile > .name,
 #wrap > section#friends > .bookmark > a .bookmark2 > .profile > .name,
-#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name {
+#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name,
+#wrap > section#friends > .bookmark > a .bookmark4 > .profile > .name {
   margin-left: 15px;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .profile > .name > h3,
 #wrap > section#friends > .bookmark > a .bookmark2 > .profile > .name > h3,
-#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name > h3 {
+#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name > h3,
+#wrap > section#friends > .bookmark > a .bookmark4 > .profile > .name > h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .profile > .name > p,
 #wrap > section#friends > .bookmark > a .bookmark2 > .profile > .name > p,
-#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name > p {
+#wrap > section#friends > .bookmark > a .bookmark3 > .profile > .name > p,
+#wrap > section#friends > .bookmark > a .bookmark4 > .profile > .name > p {
   color: #999999;
   font-size: 15px;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .date > .alarm,
 #wrap > section#friends > .bookmark > a .bookmark2 > .date > .alarm,
-#wrap > section#friends > .bookmark > a .bookmark3 > .date > .alarm {
+#wrap > section#friends > .bookmark > a .bookmark3 > .date > .alarm,
+#wrap > section#friends > .bookmark > a .bookmark4 > .date > .alarm {
   position: absolute;
   right: 0;
   top: 150px;
 }
 #wrap > section#friends > .bookmark > a > .bookmark1 > .date > .alarm > p,
 #wrap > section#friends > .bookmark > a .bookmark2 > .date > .alarm > p,
-#wrap > section#friends > .bookmark > a .bookmark3 > .date > .alarm > p {
+#wrap > section#friends > .bookmark > a .bookmark3 > .date > .alarm > p,
+#wrap > section#friends > .bookmark > a .bookmark4 > .date > .alarm > p {
   width: 18px;
   height: 18px;
   text-align: center;
@@ -453,7 +499,7 @@
   color: #fff;
   font-size: 11px;
   background-color: #f00;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 #wrap > section#find > .add {
   margin: 0 20px;
@@ -502,7 +548,7 @@
   font-size: 35px;
   color: #000;
   border: 3px solid #000;
-  border-radius: 100%;
+  border-radius: 50%;
   overflow: hidden;
 }
 #wrap > section#find > .suggest > .suggest-list > ul > li > a > .profile > h4 {
@@ -517,7 +563,7 @@
   font-size: 20px;
 }
 #wrap > section#talk {
-  height: 800px;
+  height: calc(100vh + 65px);
   background-image: url(./../images/chatBg.png);
   overflow-x: hidden;
 }
@@ -555,7 +601,14 @@
   font-size: 23px;
 }
 #wrap > section#talk > .date {
+  margin: 0 auto;
   text-align: center;
+  background-color: #fff;
+  width: 160px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #aaa;
 }
 #wrap > section#talk > .chat {
   display: flex;
@@ -564,7 +617,9 @@
   width: 40px;
   height: 40px;
   margin-left: 20px;
-  border-radius: 100%;
+  border-radius: 40%;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #626262;
 }
 #wrap > section#talk > .chat > .chat-cont > .you {
   width: 100vw;
@@ -583,6 +638,128 @@
   text-align: center;
   background-color: #fff;
   border-radius: 15px;
+  box-shadow: 2px 2px 10px #aaa;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino {
+  width: 340px;
+  margin: 5px 0 0 20px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #aaa;
+  text-align: left;
+  margin: 10px 0 0 20px;
+  padding-bottom: 5px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > h3 {
+  margin-left: 20px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > a {
+  display: block;
+  text-align: center;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > p {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > p > img {
+  width: 52px;
+  height: 52px;
+  margin: 0 20px 0 10px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > button {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  width: 330px;
+  background-color: #f6f7f8;
+  border: 1px solid #eee;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .domino > button > a {
+  display: block;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay {
+  position: relative;
+  width: 320px;
+  margin: 10px 0 0 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #aaa;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .mark {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  font-size: 8px;
+  background-color: #444444;
+  border-radius: 50%;
+  transform: translate(25%, -25%);
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .top {
+  height: 45px;
+  background-color: #fee500;
+  border-radius: 5px 5px 0 0;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .top > h3 {
+  font-size: 16px;
+  margin-left: 20px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info {
+  margin: 0 20px 0;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .price {
+  border-bottom: 1px solid #ccc;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .price > small {
+  display: block;
+  font-size: 15px;
+  margin: 15px 0 6px 0;
+  color: #737373;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .price > h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .mer > p {
+  margin: 10px 0 20px 0;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .mer > ul > li {
+  line-height: 1.8;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .mer > ul > li > span {
+  display: block;
+  text-indent: 20px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .mer > .plus {
+  padding-bottom: 15px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .info > .mer > .plus > p {
+  margin-top: 25px;
+  color: #737373;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .button {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+#wrap > section#talk > .chat > .chat-cont > .you > .kakaopay > .button > button {
+  margin-bottom: 5px;
+  height: 40px;
+  background-color: #f6f7f8;
+  border: 1px solid #eee;
+  border-radius: 6px;
 }
 #wrap > section#talk > .chat > .chat-cont > .me {
   display: flex;
@@ -597,6 +774,7 @@
   background-color: #fae54e;
   border-radius: 15px;
   margin-right: 90px;
+  box-shadow: 2px 2px 10px #aaa;
 }
 #wrap > footer > .bottombar {
   display: flex;
@@ -639,7 +817,7 @@
   font-size: 10px;
   text-align: center;
   background-color: #f00;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 #wrap > footer > .bottombar > .find > a:hover {
   color: #ff6666;
@@ -678,7 +856,9 @@
   width: 100%;
   height: 50%;
   margin-right: 20px;
-  border-width: 0;
+  border: none;
+  outline: none;
+  text-indent: 15px;
 }
 #wrap > footer#talk-footer > .sendmessage > .emoticon {
   display: flex;
@@ -690,4 +870,5 @@
 }
 #wrap > footer#talk-footer > .keyboard > img {
   width: 100%;
+  height: 326px;
 }/*# sourceMappingURL=style.css.map */

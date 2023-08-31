@@ -33,6 +33,16 @@ $point-color-1: #f00;
 		z-index: 1000;
 		background-color: #ffd700;
 
+		> .notmobile {
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			font-size: 24px;
+			font-weight: 800;
+			text-align: center;
+		}
+
 		> header,
 		section,
 		footer {
@@ -42,6 +52,12 @@ $point-color-1: #f00;
 }
 
 #wrap {
+	@media screen and (max-width: 550px) {
+		> .notmobile {
+			font-size: 0;
+		}
+	}
+
 	> header {
 		> .topbar {
 			display: flex;
@@ -53,17 +69,26 @@ $point-color-1: #f00;
 			height: 35px;
 			line-height: 35px;
 			font-size: 15px;
+			background-color: #fff;
+			z-index: 10000;
 
 			> .skt {
 				display: flex;
+				width: 17%;
 
 				> p {
 					margin-left: 7px;
 				}
 			}
 
+			> .time {
+				width: 70%;
+				text-align: center;
+			}
+
 			> .battery {
 				display: flex;
+				width: 13%;
 
 				> p {
 					margin-right: 5px;
@@ -160,7 +185,8 @@ $point-color-1: #f00;
 				> .chatlist1,
 				.chatlist2,
 				.chatlist3,
-				.chatlist4 {
+				.chatlist4,
+				.chatlist5 {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -174,8 +200,9 @@ $point-color-1: #f00;
 						> img {
 							width: 64px;
 							height: 64px;
-							border-radius: 25px;
 							margin-left: 20px;
+							border: 1px solid #ccc;
+							border-radius: 25px;
 						}
 
 						> .name {
@@ -184,6 +211,12 @@ $point-color-1: #f00;
 							> h3 {
 								font-size: 20px;
 								margin-bottom: 10px;
+
+								> i {
+									margin-left: 20px;
+									color: #cccccc;
+									font-size: 16px;
+								}
 							}
 
 							> p {
@@ -211,7 +244,7 @@ $point-color-1: #f00;
 								font-size: 10px;
 								text-align: center;
 								background-color: $point-color-1;
-								border-radius: 100%;
+								border-radius: 50%;
 							}
 						} //end of .alarm
 					} //end of .date
@@ -226,7 +259,6 @@ $point-color-1: #f00;
 			display: flex;
 			align-items: center;
 			position: relative;
-			top: 35px;
 
 			> img {
 				width: 75px;
@@ -370,7 +402,6 @@ $point-color-1: #f00;
 
 		> .setting-list {
 			position: relative;
-			top: 35px;
 			> ul {
 				line-height: 3;
 
@@ -400,23 +431,23 @@ $point-color-1: #f00;
 	} //end of section#setting
 
 	> section#friends {
+		height: 865px;
+
 		> .me {
 			display: flex;
 			align-items: center;
 			position: relative;
-			top: 35px;
 			margin: 0 20px 0;
 			border-bottom: 1px solid #e6e6e6;
 
 			> img {
 				width: 80px;
 				height: 80px;
-				margin: 20px 20px 10px 0;
+				margin: 10px 20px 10px 0;
 				border-radius: 25px;
 			}
 
 			> .name {
-				margin-top: 20px;
 				> h3 {
 					font-size: 20px;
 					font-weight: 500;
@@ -431,13 +462,12 @@ $point-color-1: #f00;
 		> .birthday,
 		.newfriends {
 			position: relative;
-			top: 35px;
 			margin: 0 20px 0;
 			border-bottom: 1px solid #e6e6e6;
 
 			> h4 {
 				font-weight: 400;
-				margin: 20px 0 10px 0;
+				margin: 10px 0 10px 0;
 			}
 
 			> .profile {
@@ -471,7 +501,8 @@ $point-color-1: #f00;
 
 				> .bookmark1,
 				.bookmark2,
-				.bookmark3 {
+				.bookmark3,
+				.bookmark4 {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -485,6 +516,7 @@ $point-color-1: #f00;
 						> img {
 							width: 64px;
 							height: 64px;
+							border: 1px solid #ccc;
 							border-radius: 25px;
 						}
 
@@ -516,7 +548,7 @@ $point-color-1: #f00;
 								color: #fff;
 								font-size: 11px;
 								background-color: #f00;
-								border-radius: 100%;
+								border-radius: 50%;
 							}
 						}
 					}
@@ -536,6 +568,7 @@ $point-color-1: #f00;
 				align-items: center;
 				text-align: center;
 				margin: 20px 0;
+
 				> li {
 					> a {
 						> h3 {
@@ -585,7 +618,7 @@ $point-color-1: #f00;
 									font-size: 35px;
 									color: #000;
 									border: 3px solid #000;
-									border-radius: 100%;
+									border-radius: 50%;
 									overflow: hidden;
 								}
 
@@ -610,7 +643,7 @@ $point-color-1: #f00;
 	} //end of section#find
 
 	> section#talk {
-		height: 800px;
+		height: calc(100vh + 65px);
 		background-image: url(./../images/chatBg.png);
 		overflow-x: hidden;
 
@@ -659,7 +692,14 @@ $point-color-1: #f00;
 		} //end of .setting
 
 		> .date {
+			margin: 0 auto;
 			text-align: center;
+			background-color: #fff;
+			width: 160px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 20px;
+			box-shadow: 1px 1px 10px #aaa;
 		} //end of .date
 
 		> .chat {
@@ -669,7 +709,9 @@ $point-color-1: #f00;
 				width: 40px;
 				height: 40px;
 				margin-left: 20px;
-				border-radius: 100%;
+				border-radius: 40%;
+				background-color: #fff;
+				box-shadow: 1px 1px 10px #626262;
 			}
 
 			> .chat-cont {
@@ -691,8 +733,154 @@ $point-color-1: #f00;
 						text-align: center;
 						background-color: #fff;
 						border-radius: 15px;
+						box-shadow: 2px 2px 10px #aaa;
 					}
-				}
+
+					> .domino {
+						width: 340px;
+						margin: 5px 0 0 20px;
+						line-height: 40px;
+						text-align: center;
+						background-color: #fff;
+						border-radius: 5px;
+						box-shadow: 2px 2px 10px #aaa;
+						text-align: left;
+						margin: 10px 0 0 20px;
+						padding-bottom: 5px;
+
+						> h3 {
+							margin-left: 20px;
+						}
+
+						> a {
+							display: block;
+							text-align: center;
+						}
+
+						> p {
+							display: flex;
+							align-items: center;
+							line-height: 1;
+							margin-bottom: 10px;
+							font-size: 14px;
+
+							> img {
+								width: 52px;
+								height: 52px;
+								margin: 0 20px 0 10px;
+							}
+						}
+
+						> button {
+							display: block;
+							height: 40px;
+							margin: 0 auto;
+							text-align: center;
+							width: 330px;
+							background-color: #f6f7f8;
+							border: 1px solid #eee;
+
+							> a {
+								display: block;
+							}
+						}
+					} //end of .domino
+
+					> .kakaopay {
+						position: relative;
+						width: 320px;
+						margin: 10px 0 0 20px;
+						background-color: #fff;
+						border-radius: 5px;
+						box-shadow: 2px 2px 10px #aaa;
+
+						> .mark {
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 35px;
+							height: 35px;
+							line-height: 35px;
+							color: #fff;
+							text-align: center;
+							font-size: 8px;
+							background-color: #444444;
+							border-radius: 50%;
+							transform: translate(25%, -25%);
+						} //end of .mark
+
+						> .top {
+							height: 45px;
+							background-color: #fee500;
+							border-radius: 5px 5px 0 0;
+							> h3 {
+								font-size: 16px;
+								margin-left: 20px;
+							}
+						} //end of .top
+
+						> .info {
+							margin: 0 20px 0;
+
+							> .price {
+								border-bottom: 1px solid #ccc;
+
+								> small {
+									display: block;
+									font-size: 15px;
+									margin: 15px 0 6px 0;
+									color: #737373;
+								}
+
+								> h4 {
+									font-size: 18px;
+									margin-bottom: 15px;
+								}
+							} //end of .price
+
+							> .mer {
+								> p {
+									margin: 10px 0 20px 0;
+								}
+
+								> ul {
+									> li {
+										line-height: 1.8;
+										> span {
+											display: block;
+											text-indent: 20px;
+										}
+									} //end of li
+								} //end of ul
+
+								> .plus {
+									padding-bottom: 15px;
+
+									> p {
+										margin-top: 25px;
+										color: #737373;
+									}
+								} //end of .plus
+							} //end of .mer
+						} //end of .info
+
+						> .button {
+							display: flex;
+							flex-direction: column;
+							width: 95%;
+							margin: 0 auto;
+							padding-bottom: 5px;
+
+							> button {
+								margin-bottom: 5px;
+								height: 40px;
+								background-color: #f6f7f8;
+								border: 1px solid #eee;
+								border-radius: 6px;
+							}
+						} //end of .button
+					} //end of .kakaopay
+				} //end of .you
 
 				> .me {
 					display: flex;
@@ -707,8 +895,9 @@ $point-color-1: #f00;
 						background-color: #fae54e;
 						border-radius: 15px;
 						margin-right: 90px;
+						box-shadow: 2px 2px 10px #aaa;
 					}
-				}
+				} //end of .me
 			}
 		} //end of .chat
 	} //end of section#talk
@@ -764,7 +953,7 @@ $point-color-1: #f00;
 							font-size: 10px;
 							text-align: center;
 							background-color: $point-color-1;
-							border-radius: 100%;
+							border-radius: 50%;
 						}
 					}
 				}
@@ -822,7 +1011,9 @@ $point-color-1: #f00;
 				width: 100%;
 				height: 50%;
 				margin-right: 20px;
-				border-width: 0;
+				border: none;
+				outline: none;
+				text-indent: 15px;
 			}
 
 			> .emoticon {
@@ -839,6 +1030,7 @@ $point-color-1: #f00;
 		> .keyboard {
 			> img {
 				width: 100%;
+				height: 326px;
 			}
 		} //end of .keyboard
 	} //end of footer#talk-footer
